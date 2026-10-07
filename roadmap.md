@@ -1,7 +1,5 @@
-# Roadmap
+# EDC homepage
 
-- [x] Rebuild the EDC homepage in a distinctive neobrutalist visual system
-- [x] Add interactive program carousel and scroll-based motion
-- [x] Verify desktop and mobile presentation
-- [x] Refresh event cards with interactive neobrutalist motion and palette
-- [x] Expand the landing-page stack to three readable poster cards
+- [ ] Build the selected centered broadsheet and club content.
+- [ ] Add authentic club photographs and working navigation/contact controls.
+- [ ] Verify the homepage and its interactions.
