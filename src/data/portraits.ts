@@ -1,0 +1,22 @@
+// Stock portraits for demonstration records, not actual EDC members.
+import p0 from "@/assets/demo-portrait-0.jpg.asset.json";
+import p1 from "@/assets/demo-portrait-1.jpg.asset.json";
+import p2 from "@/assets/demo-portrait-2.jpg.asset.json";
+import p3 from "@/assets/demo-portrait-3.jpg.asset.json";
+import p4 from "@/assets/demo-portrait-4.jpg.asset.json";
+import p5 from "@/assets/demo-portrait-5.jpg.asset.json";
+import p6 from "@/assets/demo-portrait-6.jpg.asset.json";
+import p7 from "@/assets/demo-portrait-7.jpg.asset.json";
+import p8 from "@/assets/demo-portrait-8.jpg.asset.json";
+import p9 from "@/assets/demo-portrait-9.jpg.asset.json";
+import p10 from "@/assets/demo-portrait-10.jpg.asset.json";
+import p11 from "@/assets/demo-portrait-11.jpg.asset.json";
+import p12 from "@/assets/demo-portrait-12.jpg.asset.json";
+import p13 from "@/assets/demo-portrait-13.jpg.asset.json";
+import p14 from "@/assets/demo-portrait-14.jpg.asset.json";
+import p15 from "@/assets/demo-portrait-15.jpg.asset.json";
+import p16 from "@/assets/demo-portrait-16.jpg.asset.json";
+import p17 from "@/assets/demo-portrait-17.jpg.asset.json";
+import p18 from "@/assets/demo-portrait-18.jpg.asset.json";
+import p19 from "@/assets/demo-portrait-19.jpg.asset.json";
+export const DEMO_PORTRAITS = [p0.url,p1.url,p2.url,p3.url,p4.url,p5.url,p6.url,p7.url,p8.url,p9.url,p10.url,p11.url,p12.url,p13.url,p14.url,p15.url,p16.url,p17.url,p18.url,p19.url];
