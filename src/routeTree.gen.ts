@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SotmEquestRouteImport } from './routes/sotm-equest'
 import { Route as SponsorsRouteImport } from './routes/sponsors'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SotmEquestRoute = SotmEquestRouteImport.update({
+  id: '/sotm-equest',
+  path: '/sotm-equest',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SponsorsRoute = SponsorsRouteImport.update({
@@ -25,27 +31,31 @@ const SponsorsRoute = SponsorsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sotm-equest': typeof SotmEquestRoute
   '/sponsors': typeof SponsorsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sotm-equest': typeof SotmEquestRoute
   '/sponsors': typeof SponsorsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sotm-equest': typeof SotmEquestRoute
   '/sponsors': typeof SponsorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sponsors'
+  fullPaths: '/' | '/sotm-equest' | '/sponsors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sponsors'
-  id: '__root__' | '/' | '/sponsors'
+  to: '/' | '/sotm-equest' | '/sponsors'
+  id: '__root__' | '/' | '/sotm-equest' | '/sponsors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SotmEquestRoute: typeof SotmEquestRoute
   SponsorsRoute: typeof SponsorsRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sotm-equest': {
+      id: '/sotm-equest'
+      path: '/sotm-equest'
+      fullPath: '/sotm-equest'
+      preLoaderRoute: typeof SotmEquestRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sponsors': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SotmEquestRoute: SotmEquestRoute,
   SponsorsRoute: SponsorsRoute,
 }
 export const routeTree = rootRouteImport
